@@ -19,3 +19,9 @@ helm repo index docs --url https://virtualresearchenvironment.github.io/helm-cha
 ```bash
 helm install deployment-name ./mychart
 ```
+
+### Using a chart from the helm repository
+```bash
+helm repo add vre https://virtualresearchenvironment.github.io/helm-charts/
+helm install deployment-name vre/mychart
+```
