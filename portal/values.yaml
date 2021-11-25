@@ -48,9 +48,6 @@ tolerations: []
 
 affinity: {}
 
-appConfig:
-  port: 80
-
 extraEnv: {}
 
 extraEnvYaml: {}
