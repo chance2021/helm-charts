@@ -53,3 +53,11 @@ appConfig:
 extraEnv: {}
 
 extraEnvYaml: {}
+
+readinessProbe: []
+
+extraVolumeMounts: []
+
+extraVolumes: []
+
+updateStrategy: []
