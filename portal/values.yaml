@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: portal
   tag: 1465
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
