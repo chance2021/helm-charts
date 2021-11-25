@@ -48,6 +48,10 @@ tolerations: []
 
 affinity: {}
 
+readinessProbe: {}
+
+updateStrategy: {}
+
 extraEnv: {}
 
 extraEnvYaml: {}
