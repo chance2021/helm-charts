@@ -28,8 +28,8 @@ container:
 appConfig:
   port: 8080
   env: "dev"
-  config_center_enabled: false
-  contig_center_base_url:
+  CONFIG_CENTER_BASE_URL: false
+  CONFIG_CENTER_BASE_URL:
 
 
 podAnnotations: {}
