@@ -37,9 +37,9 @@ spec:
           env:
           - name: port
             value: {{ .Values.appConfig.port | quote }}
-          - name: config_center_enabled
+          - name: CONFIG_CENTER_ENABLED
             value: {{ .Values.appConfig.config_center_enabled | quote }}
-          - name: contig_center_base_url
+          - name: CONFIG_CENTER_BASE_URL
             value: {{ .Values.appConfig.contig_center_base_url | quote }}
           - name: env
             value: {{ .Values.appConfig.env | quote }}
