@@ -1,12 +1,12 @@
-# Default values for hpc-service.
+# Default values for download-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: hpc
-  tag: 25
+  repository: download
+  tag: 198
   pullPolicy: Always
 
 imagePullSecrets: []
@@ -21,7 +21,7 @@ serviceAccount:
   name: 
 
 container:
-  port: 5080
+  port: 5077
 
 podAnnotations: {}
 
@@ -48,11 +48,11 @@ tolerations: []
 affinity: {}
 
 appConfig:
-  port: 5080
+  port: 5077
   env: "dev"
   config_center_enabled: false
   contig_center_base_url: http://common.utility:5062/
-  
+
 extraEnv: {}
 
 extraEnvYaml: {}
