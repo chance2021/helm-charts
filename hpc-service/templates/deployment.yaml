@@ -39,7 +39,13 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
           - name: port
-            value: {{ .Values.appConfig.port }}
+            value: {{ .Values.appConfig.port | quote }}
+          - name: config_center_enabled
+            value: {{ .Values.appConfig.config_center_enabled | quote }}
+          - name: contig_center_base_url
+            value: {{ .Values.appConfig.contig_center_base_url | quote }}
+          - name: env
+            value: {{ .Values.appConfig.env | quote }}
 {{- if .Values.extraEnv }} 
   {{- range $key, $value := .Values.extraEnv }}
           - name: {{ $key }}
