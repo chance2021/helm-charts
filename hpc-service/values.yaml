@@ -52,7 +52,7 @@ appConfig:
   env: "dev"
   config_center_enabled: false
   contig_center_base_url: http://common.utility:5062/
-  
+  srv_namespace: service_hpc
 extraEnv: {}
 
 extraEnvYaml: {}
