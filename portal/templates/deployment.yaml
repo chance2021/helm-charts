@@ -35,14 +35,8 @@ spec:
             - containerPort: {{ .Values.container.port }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: port
-            value: {{ .Values.appConfig.port }}
           - name: env
             value: {{ .Values.appConfig.env }}
-          - name: config_center_enabled
-            value: {{ .Values.appConfig.config_center_enabled }}
-          - name: contig_center_base_url
-            value: {{ .Values.appConfig.contig_center_base_url }}
 {{- if .Values.extraEnv }}
   {{- range $key, $value := .Values.extraEnv }}
           - name: {{ $key }}
