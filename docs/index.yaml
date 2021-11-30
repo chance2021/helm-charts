@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  bff:
+  - apiVersion: v2
+    appVersion: "1471"
+    created: "2021-11-30T15:02:38.992799-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 8ee1985765c105a1c8e5fe88e38b0b3549730d3997fd9ae82895480733f5b048
+    name: bff
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/bff-0.1.0.tgz
+    version: 0.1.0
   download-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-11-26T14:03:11.667222113-05:00"
+    created: "2021-11-30T15:02:38.993193-05:00"
     description: A Helm chart for Kubernetes
     digest: 9021de839c16a169aa14c71b377b19a75a780bbd874df6d04b8aef2506869822
     name: download-service
@@ -14,7 +25,7 @@ entries:
   hpc-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-11-26T14:03:11.667843049-05:00"
+    created: "2021-11-30T15:02:38.993888-05:00"
     description: A Helm chart for Kubernetes
     digest: 918aaa8b2d9e6675463ab1b71173bc1f0671df89af4ec344afc66fe2c4cfc51e
     name: hpc-service
@@ -22,4 +33,26 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/hpc-service-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-26T14:03:11.666395014-05:00"
+  portal:
+  - apiVersion: v2
+    appVersion: "1465"
+    created: "2021-11-30T15:02:38.994558-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 945e75a975b02b146ed61fb498e3b8b4504784442184723051be841c799e2b0d
+    name: portal
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/portal-0.1.0.tgz
+    version: 0.1.0
+  upload-service:
+  - apiVersion: v2
+    appVersion: "251"
+    created: "2021-11-30T15:02:38.995192-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 21eda6907aed2f0cc60fb4727faa190b542ac17e602a6d0e15404901d59ea7b4
+    name: upload-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/upload-service-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-11-30T15:02:38.991747-05:00"
