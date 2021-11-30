@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "portal.fullname" . }}
+  name: {{ include "upload-service.fullname" . }}
   labels:
-    {{- include "portal.labels" . | nindent 4 }}
+    {{- include "upload-service.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -14,7 +14,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "portal.selectorLabels" . | nindent 6 }}
+      {{- include "upload-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -22,7 +22,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "portal.selectorLabels" . | nindent 8 }}
+        {{- include "upload-service.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -31,12 +31,18 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.container.port }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+          - name: port
+            value: {{ .Values.appConfig.port | quote }}
+          - name: CONFIG_CENTER_ENABLED
+            value: {{ .Values.appConfig.config_center_enabled | quote }}
+          - name: CONFIG_CENTER_BASE_URL
+            value: {{ .Values.appConfig.contig_center_base_url | quote }}
           - name: env
-            value: {{ .Values.appConfig.env }}
+            value: {{ .Values.appConfig.env | quote }}
 {{- if .Values.extraEnv }}
   {{- range $key, $value := .Values.extraEnv }}
           - name: {{ $key }}
@@ -52,7 +58,6 @@ spec:
           volumeMounts:
             - mountPath: {{ .Values.volumes.mountPath }}
               name: {{ .Values.volumes.name }}
-              readOnly: true
           {{- end }}
           {{- if .Values.readinessProbe }}
           readinessProbe:
@@ -61,11 +66,8 @@ spec:
       {{- if .Values.volumes }}
       volumes:
         - name: {{ .Values.volumes.name }}
-          configMap:
-            name: {{ .Values.volumes.name }}
-            items:
-              - key: {{ .Values.volumes.key }}
-                path: {{ .Values.volumes.key }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.volumes.claimName }}
       {{- end }}
 
       {{- with .Values.nodeSelector }}
