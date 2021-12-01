@@ -35,6 +35,8 @@ service:
 
 podAnnotations: {}
 
+deploymentAnnotations: {}
+
 podSecurityContext: {}
 
 securityContext: {}
