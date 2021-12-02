@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.volumes.name }}
+data:
+  vre-home.conf: |-
+{{ .Files.Get "vre-home.conf" | indent 4}}
