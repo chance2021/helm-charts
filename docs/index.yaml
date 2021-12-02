@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  auth-service:
+  - apiVersion: v2
+    appVersion: "131"
+    created: "2021-12-02T14:18:10.195772952-05:00"
+    description: A Helm chart for Kubernetes
+    digest: a5af799f7c1b4d81d333f85802eba1909665f56c00408f7a3bf32467d953d19b
+    name: auth-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/auth-service-0.1.0.tgz
+    version: 0.1.0
   bff:
   - apiVersion: v2
     appVersion: "1471"
-    created: "2021-11-30T15:02:38.992799-05:00"
+    created: "2021-12-02T14:18:10.201179395-05:00"
     description: A Helm chart for Kubernetes
     digest: 8ee1985765c105a1c8e5fe88e38b0b3549730d3997fd9ae82895480733f5b048
     name: bff
@@ -11,10 +22,54 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/bff-0.1.0.tgz
     version: 0.1.0
+  bff-vrecli-service:
+  - apiVersion: v2
+    appVersion: "135"
+    created: "2021-12-02T14:18:10.201770802-05:00"
+    description: A Helm chart for Kubernetes
+    digest: d557d8ef4b2548f81123729ec32d19cee7f3fd29a3653a601dca5dbee506c574
+    name: bff-vrecli-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/bff-vrecli-service-0.1.0.tgz
+    version: 0.1.0
+  cataloguing-service:
+  - apiVersion: v2
+    appVersion: "92"
+    created: "2021-12-02T14:18:10.202294006-05:00"
+    description: A Helm chart for Kubernetes
+    digest: b96101efae20d3bef0b58eca140a76ae4cf5760e8ab8b8886ed4d0350b4b2de9
+    name: cataloguing-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/cataloguing-service-0.1.0.tgz
+    version: 0.1.0
+  common-service:
+  - apiVersion: v2
+    appVersion: "29"
+    created: "2021-12-02T14:18:10.202783396-05:00"
+    description: A Helm chart for Kubernetes
+    digest: b010399ce4395cf7042ca25bbae36bb07454f390f19267095f2f5c07bbd41239
+    name: common-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/common-service-0.1.0.tgz
+    version: 0.1.0
+  dataset-service:
+  - apiVersion: v2
+    appVersion: "25"
+    created: "2021-12-02T14:18:10.203295395-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 3bf19e3500ac0a2a111c874f72966f1cd53f6c2a9542ed0ed6ec317b4a2d2d10
+    name: dataset-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/dataset-service-0.1.0.tgz
+    version: 0.1.0
   download-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-11-30T15:02:38.993193-05:00"
+    created: "2021-12-02T14:18:10.203958419-05:00"
     description: A Helm chart for Kubernetes
     digest: 9021de839c16a169aa14c71b377b19a75a780bbd874df6d04b8aef2506869822
     name: download-service
@@ -22,10 +77,32 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/download-service-0.1.0.tgz
     version: 0.1.0
+  encryption-service:
+  - apiVersion: v2
+    appVersion: "16"
+    created: "2021-12-02T14:18:10.205240712-05:00"
+    description: A Helm chart for Kubernetes
+    digest: b503c8aa944cf3efa78238de56a3e65fe838ae1956649f7e6295455328910479
+    name: encryption-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/encryption-service-0.1.0.tgz
+    version: 0.1.0
+  entityinfo-service:
+  - apiVersion: v2
+    appVersion: "251"
+    created: "2021-12-02T14:18:10.205695769-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 6a16f64004854bad989fceb54270488121f4b7655d39419c82ee4d3291e2e450
+    name: entityinfo-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/entityinfo-service-0.1.0.tgz
+    version: 0.1.0
   hpc-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-11-30T15:02:38.993888-05:00"
+    created: "2021-12-02T14:18:10.20623657-05:00"
     description: A Helm chart for Kubernetes
     digest: 918aaa8b2d9e6675463ab1b71173bc1f0671df89af4ec344afc66fe2c4cfc51e
     name: hpc-service
@@ -33,10 +110,21 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/hpc-service-0.1.0.tgz
     version: 0.1.0
+  notification-service:
+  - apiVersion: v2
+    appVersion: "103"
+    created: "2021-12-02T14:18:10.20666269-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 05c1a628ea8f558421f4eb949c75ce8ff66101df5a1dcd0b6ccedd7f24eecb66
+    name: notification-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/notification-service-0.1.0.tgz
+    version: 0.1.0
   portal:
   - apiVersion: v2
     appVersion: "1465"
-    created: "2021-11-30T15:02:38.994558-05:00"
+    created: "2021-12-02T14:18:10.207231956-05:00"
     description: A Helm chart for Kubernetes
     digest: 945e75a975b02b146ed61fb498e3b8b4504784442184723051be841c799e2b0d
     name: portal
@@ -44,10 +132,21 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/portal-0.1.0.tgz
     version: 0.1.0
+  provenance-service:
+  - apiVersion: v2
+    appVersion: "64"
+    created: "2021-12-02T14:18:10.207648856-05:00"
+    description: A Helm chart for Kubernetes
+    digest: fb622970d6fec12f906f2063f7f70d1f68975c46d52fd99ae5b4d5da86e4a691
+    name: provenance-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/provenance-service-0.1.0.tgz
+    version: 0.1.0
   upload-service:
   - apiVersion: v2
     appVersion: "251"
-    created: "2021-11-30T15:02:38.995192-05:00"
+    created: "2021-12-02T14:18:10.208193626-05:00"
     description: A Helm chart for Kubernetes
     digest: 21eda6907aed2f0cc60fb4727faa190b542ac17e602a6d0e15404901d59ea7b4
     name: upload-service
@@ -55,4 +154,4 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/upload-service-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-30T15:02:38.991747-05:00"
+generated: "2021-12-02T14:18:10.195167111-05:00"
