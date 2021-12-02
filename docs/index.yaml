@@ -14,7 +14,7 @@ entries:
   bff:
   - apiVersion: v2
     appVersion: "1471"
-    created: "2021-12-02T14:18:10.201179395-05:00"
+    created: "2021-12-02T12:23:33.09161-05:00"
     description: A Helm chart for Kubernetes
     digest: 8ee1985765c105a1c8e5fe88e38b0b3549730d3997fd9ae82895480733f5b048
     name: bff
@@ -69,7 +69,7 @@ entries:
   download-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-12-02T14:18:10.203958419-05:00"
+    created: "2021-12-02T12:23:33.092519-05:00"
     description: A Helm chart for Kubernetes
     digest: 9021de839c16a169aa14c71b377b19a75a780bbd874df6d04b8aef2506869822
     name: download-service
@@ -102,7 +102,7 @@ entries:
   hpc-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-12-02T14:18:10.20623657-05:00"
+    created: "2021-12-02T12:23:33.093397-05:00"
     description: A Helm chart for Kubernetes
     digest: 918aaa8b2d9e6675463ab1b71173bc1f0671df89af4ec344afc66fe2c4cfc51e
     name: hpc-service
@@ -120,11 +120,21 @@ entries:
     type: application
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/notification-service-0.1.0.tgz
+  kg-service:
+  - apiVersion: v2
+    appVersion: "30"
+    created: "2021-12-02T12:23:33.09389-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 6cbcbc88fdb85727d6e310d9fa76a22aefb59be3222e69b3b58c9ce3cd9e3db4
+    name: kg-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/kg-service-0.1.0.tgz
     version: 0.1.0
   portal:
   - apiVersion: v2
     appVersion: "1465"
-    created: "2021-12-02T14:18:10.207231956-05:00"
+    created: "2021-12-02T12:23:33.095611-05:00"
     description: A Helm chart for Kubernetes
     digest: 945e75a975b02b146ed61fb498e3b8b4504784442184723051be841c799e2b0d
     name: portal
