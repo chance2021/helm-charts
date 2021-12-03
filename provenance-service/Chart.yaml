@@ -1,4 +1,4 @@
-2piVersion: v2
+apiVersion: v2
 name: provenance-service
 description: A Helm chart for Kubernetes
 
