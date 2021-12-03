@@ -1,13 +1,14 @@
-# Default values for queue-service.
+# Default values for pipelinewatch-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: queue-socketio
+  repository: pipelinewatch
   pullPolicy: Always
-  tag: 97
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: 242
 
 imagePullSecrets: []
 nameOverride: ""
@@ -19,7 +20,7 @@ serviceAccount:
   name: "consumer-serviceaccount"
 
 container:
-  port: 6062
+  port: 6063
 
 appConfig:
   env: "dev"
@@ -33,7 +34,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 6062
+  port: 6063
 
 ingress:
   enabled: false
