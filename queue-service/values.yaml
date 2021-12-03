@@ -16,7 +16,7 @@ fullnameOverride: ""
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
-  name: "consumer-serviceaccount"
+  name: ""
 
 container:
   port: 6062
