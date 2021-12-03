@@ -17,7 +17,8 @@ fullnameOverride: ""
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
-  name: "consumer-serviceaccount"
+  name: ""
+  secret: "registrypullsecret"
 
 container:
   port: 6063
