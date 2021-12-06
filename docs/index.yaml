@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  approval-service:
+  - apiVersion: v2
+    appVersion: "26"
+    created: "2021-12-06T16:04:40.605359-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 36aa573e3f9ad20288627c900afa89f8b58a22594135a86136876c1e17ab713d
+    name: approval-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/approval-service-0.1.0.tgz
+    version: 0.1.0
   bff:
   - apiVersion: v2
     appVersion: "1471"
-    created: "2021-12-02T12:23:33.09161-05:00"
+    created: "2021-12-06T16:04:40.606301-05:00"
     description: A Helm chart for Kubernetes
     digest: 8ee1985765c105a1c8e5fe88e38b0b3549730d3997fd9ae82895480733f5b048
     name: bff
@@ -11,10 +22,21 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/bff-0.1.0.tgz
     version: 0.1.0
+  dataops-utility-service:
+  - apiVersion: v2
+    appVersion: "274"
+    created: "2021-12-06T16:04:40.606831-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 8c2bb2972c115bbddf88098de273d1154221a4c8679638041f039dc185665593
+    name: dataops-utility-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/dataops-utility-service-0.1.0.tgz
+    version: 0.1.0
   download-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-12-02T12:23:33.092519-05:00"
+    created: "2021-12-06T16:04:40.607766-05:00"
     description: A Helm chart for Kubernetes
     digest: 9021de839c16a169aa14c71b377b19a75a780bbd874df6d04b8aef2506869822
     name: download-service
@@ -25,7 +47,7 @@ entries:
   hpc-service:
   - apiVersion: v2
     appVersion: "25"
-    created: "2021-12-02T12:23:33.093397-05:00"
+    created: "2021-12-06T16:04:40.608666-05:00"
     description: A Helm chart for Kubernetes
     digest: 918aaa8b2d9e6675463ab1b71173bc1f0671df89af4ec344afc66fe2c4cfc51e
     name: hpc-service
@@ -36,7 +58,7 @@ entries:
   kg-service:
   - apiVersion: v2
     appVersion: "30"
-    created: "2021-12-02T12:23:33.09389-05:00"
+    created: "2021-12-06T16:04:40.609545-05:00"
     description: A Helm chart for Kubernetes
     digest: 6cbcbc88fdb85727d6e310d9fa76a22aefb59be3222e69b3b58c9ce3cd9e3db4
     name: kg-service
@@ -44,10 +66,21 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/kg-service-0.1.0.tgz
     version: 0.1.0
+  pipelinewatch-service:
+  - apiVersion: v2
+    appVersion: "242"
+    created: "2021-12-06T16:04:40.611258-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 44524d6c988167fb7e6e30ddcaf0fce6324f495b7599f56816efb37f1e686c5e
+    name: pipelinewatch-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/pipelinewatch-service-0.1.0.tgz
+    version: 0.1.0
   portal:
   - apiVersion: v2
     appVersion: "1465"
-    created: "2021-12-02T12:23:33.095611-05:00"
+    created: "2021-12-06T16:04:40.612125-05:00"
     description: A Helm chart for Kubernetes
     digest: 945e75a975b02b146ed61fb498e3b8b4504784442184723051be841c799e2b0d
     name: portal
@@ -55,10 +88,21 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/portal-0.1.0.tgz
     version: 0.1.0
+  queue-service:
+  - apiVersion: v2
+    appVersion: "97"
+    created: "2021-12-06T16:04:40.612646-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 3264ada17bfabac0cc876b952b89c63574bb49ce44575fee8fec35ed477b171a
+    name: queue-service
+    type: application
+    urls:
+    - https://virtualresearchenvironment.github.io/helm-charts/queue-service-0.1.0.tgz
+    version: 0.1.0
   upload-service:
   - apiVersion: v2
     appVersion: "251"
-    created: "2021-12-02T12:23:33.096522-05:00"
+    created: "2021-12-06T16:04:40.613536-05:00"
     description: A Helm chart for Kubernetes
     digest: 21eda6907aed2f0cc60fb4727faa190b542ac17e602a6d0e15404901d59ea7b4
     name: upload-service
@@ -66,4 +110,4 @@ entries:
     urls:
     - https://virtualresearchenvironment.github.io/helm-charts/upload-service-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-02T12:23:33.090063-05:00"
+generated: "2021-12-06T16:04:40.604618-05:00"
