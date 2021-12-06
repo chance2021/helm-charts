@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "download-service.fullname" . }}
+  name: {{ include "dataops-gr-service.fullname" . }}
   labels:
-    {{- include "download-service.labels" . | nindent 4 }}
+    {{- include "dataops-gr-service.labels" . | nindent 4 }}
   {{- with .Values.deploymentAnnotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
@@ -18,7 +18,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "download-service.selectorLabels" . | nindent 6 }}
+      {{- include "dataops-gr-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -26,13 +26,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "download-service.selectorLabels" . | nindent 8 }}
+        {{- include "dataops-gr-service.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "download-service.serviceAccountName" . }}
+      serviceAccountName: {{ include "dataops-gr-service.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
