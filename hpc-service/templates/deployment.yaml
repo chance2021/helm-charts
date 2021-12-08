@@ -42,8 +42,8 @@ spec:
             value: {{ .Values.appConfig.port | quote }}
           - name: config_center_enabled
             value: {{ .Values.appConfig.config_center_enabled | quote }}
-          - name: contig_center_base_url
-            value: {{ .Values.appConfig.contig_center_base_url | quote }}
+          - name: config_center_base_url
+            value: {{ .Values.appConfig.config_center_base_url | quote }}
           - name: env
             value: {{ .Values.appConfig.env | quote }}
           - name: srv_namespace
