@@ -1,13 +1,14 @@
-# Default values for download-service.
+# Default values for dataset-neo4j.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: download
-  tag: 198
+  repository: neo4j
   pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: 124
 
 imagePullSecrets: []
 nameOverride: ""
@@ -16,24 +17,24 @@ fullnameOverride: ""
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name: 
+  name:
 
 container:
-  port: 5077
+  port: 5062
 
+appConfig:
+  env: "dev"
+  CONFIG_CENTER_BASE_URL: false
+  CONFIG_CENTER_BASE_URL:
 podAnnotations: {}
-
-deploymentAnnotations: {}
 
 podSecurityContext: {}
 
 securityContext: {}
 
 service:
-  type: ClusterIP
-  port: 80
+  type: LoadBalancer
+  port: 5062
 
 ingress:
   enabled: false
@@ -49,21 +50,10 @@ tolerations: []
 
 affinity: {}
 
-appConfig:
-  port: 5077
-  env: "dev"
-  config_center_enabled: false
-  config_center_base_url: http://common.utility:5062/
-  srv_namespace: service_download
+readinessProbe: {}
+
+updateStrategy: {}
 
 extraEnv: {}
 
 extraEnvYaml: {}
-
-readinessProbe: []
-
-extraVolumeMounts: []
-
-extraVolumes: []
-
-updateStrategy: []
