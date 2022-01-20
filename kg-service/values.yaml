@@ -29,6 +29,8 @@ appConfig:
   CONFIG_CENTER_BASE_URL:
 podAnnotations: {}
 
+deploymentAnnotations: {}
+
 podSecurityContext: {}
 
 securityContext: {}

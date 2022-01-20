@@ -31,6 +31,7 @@ appConfig:
   CONFIG_CENTER_ENABLED: false
   CONFIG_CENTER_BASE_URL:
 
+deploymentAnnotations: {}
 
 podAnnotations: {}
 
