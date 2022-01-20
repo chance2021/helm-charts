@@ -4,6 +4,10 @@ metadata:
   name: {{ include "dataops-utility-service.fullname" . }}
   labels:
     {{- include "dataops-utility-service.labels" . | nindent 4 }}
+  {{- with .Values.deploymentAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
