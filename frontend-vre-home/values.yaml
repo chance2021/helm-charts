@@ -20,6 +20,8 @@ serviceAccount:
 
 podAnnotations: {}
 
+deploymentAnnotations: {}
+
 podSecurityContext: {}
 
 securityContext: {}

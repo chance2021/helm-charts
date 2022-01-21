@@ -4,6 +4,10 @@ metadata:
   name: {{ include "hpc-service.fullname" . }}
   labels:
     {{- include "hpc-service.labels" . | nindent 4 }}
+  {{- with .Values.deploymentAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -47,8 +51,8 @@ spec:
           - name: env
             value: {{ .Values.appConfig.env | quote }}
           - name: srv_namespace
-            value: {{ .Values.appConfig.srv_namespace | quote }}            
-{{- if .Values.extraEnv }} 
+            value: {{ .Values.appConfig.srv_namespace | quote }}
+{{- if .Values.extraEnv }}
   {{- range $key, $value := .Values.extraEnv }}
           - name: {{ $key }}
             value: {{ $value | quote }}
@@ -63,13 +67,13 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.readinessProbe }}
-          readinessProbe: 
+          readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
           {{- end }}
           {{- if .Values.extraVolumeMounts }}
           volumeMounts:
             {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
-          {{- end }}  
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -85,5 +89,4 @@ spec:
       {{- if .Values.extraVolumes }}
       volumes:
         {{- toYaml .Values.extraVolumes | nindent 10 }}
-      {{- end }}  
-
+      {{- end }}

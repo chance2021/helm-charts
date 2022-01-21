@@ -1,14 +1,13 @@
-# Default values for pipelinewatch-service.
+# Default values for maintenance-page.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: pipelinewatch
+  repository: maintenance-page
   pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: 242
+  tag: 1528
 
 imagePullSecrets: []
 nameOverride: ""
@@ -17,11 +16,12 @@ fullnameOverride: ""
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
-  name: ""
-  secret: "registrypullsecret"
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
 
 container:
-  port: 6063
+  port: 5081
 
 appConfig:
   env: "dev"
@@ -35,9 +35,10 @@ podSecurityContext: {}
 
 securityContext: {}
 
+
 service:
   type: ClusterIP
-  port: 6063
+  port: 80
 
 ingress:
   enabled: false

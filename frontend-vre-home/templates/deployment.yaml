@@ -4,6 +4,10 @@ metadata:
   name: {{ include "frontend-vre-home.fullname" . }}
   labels:
     {{- include "frontend-vre-home.labels" . | nindent 4 }}
+  {{- with .Values.deploymentAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
