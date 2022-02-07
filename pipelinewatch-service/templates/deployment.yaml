@@ -37,11 +37,14 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- if .Values.container }}
+          {{- if .Values.container.port }}
           ports:
             - containerPort: {{ .Values.container.port }}
           {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.container.command }}
+          command: [{{ .Values.container.command | quote }}]
+          {{- end }}
           env:
           - name: CONFIG_CENTER_ENABLED
             value: {{ .Values.appConfig.config_center_enabled | quote }}
